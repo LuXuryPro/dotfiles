@@ -1,0 +1,4 @@
+# First exclude everything.
+*
+# then re-include all "dotfiles"
+!/.*
