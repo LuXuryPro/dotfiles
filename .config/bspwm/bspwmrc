@@ -1,0 +1,28 @@
+#! /bin/sh
+bspc rule --remove "*"
+
+bspc config border_width        2
+bspc config window_gap          0
+
+#bspc config border_width        2
+#bspc config window_gap         12
+
+bspc config split_ratio         0.5
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+
+bspc monitor LVDS1 -d 1 2 3 4 5
+bspc monitor HDMI1 -d 6 7 8 9 10
+
+bspc rule -a chromium desktop=^1 fullscreen=false
+bspc desktop ^1 -l monocle
+bspc rule -a Steam desktop=^2
+bspc desktop ^2 -l monocle
+bspc rule -a csgo_linux desktop=^3
+bspc rule -a Thunderbird desktop=^10
+bspc desktop ^10 -l monocle
+
+bspc rule -a Atom desktop=^5
+bspc desktop ^5 -l monocle
+
+panel &
