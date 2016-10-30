@@ -9,7 +9,7 @@ Plug 'airblade/vim-gitgutter'
 "Plug '~/src/deoplete-rtags'
 Plug 'zchee/deoplete-jedi'
 "Plug 'zchee/deoplete-clang'
-Plug 'pignacio/vim-yapf-format'
+"Plug 'pignacio/vim-yapf-format'
 Plug 'tfnico/vim-gradle'
 Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'alfredodeza/coveragepy.vim'
@@ -31,17 +31,16 @@ Plug 'https://github.com/justinmk/molokai'
 "Plug 'Yggdroot/indentLine'
 Plug 'https://github.com/tikhomirov/vim-glsl'
 Plug 'git://github.com/nathanaelkane/vim-indent-guides.git'
-Plug 'https://github.com/altercation/vim-colors-solarized'
 "Plug 'https://github.com/Shougo/neocomplete.vim'
 "Plug 'justmao945/vim-clang'
 Plug 'lyuts/vim-rtags'
 "Plug 'https://github.com/Rip-Rip/clang_complete'
 Plug 'https://github.com/ervandew/supertab'
-Plug 'https://github.com/scrooloose/syntastic'
+"Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 "Plug 'https://github.com/davidhalter/jedi-vim'
 "Plug 'klen/python-mode'
-Plug 'https://github.com/terryma/vim-multiple-cursors'
+"Plug 'https://github.com/terryma/vim-multiple-cursors'
 "Plug 'https://github.com/Valloric/YouCompleteMe'
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
@@ -49,7 +48,13 @@ Plug 'https://github.com/wellsjo/wellsokai.vim'
 Plug 'https://github.com/sickill/vim-monokai'
 Plug 'https://github.com/godlygeek/tabular'
 Plug 'https://github.com/eagletmt/neco-ghc'
+Plug 'pangloss/vim-javascript'
+Plug 'ternjs/tern_for_vim'
 Plug 'carlitux/deoplete-ternjs'
+Plug 'https://github.com/neovimhaskell/haskell-vim'
+Plug 'morhetz/gruvbox'
+Plug 'jnurmine/Zenburn'
+Plug 'dracula/vim'
 call plug#end()
 
 set nocompatible
@@ -79,7 +84,7 @@ set shiftround
 set expandtab
 set smarttab
 
-"set autochdir
+set autochdir
 
 set wildmenu
 
@@ -95,7 +100,7 @@ map <Leader>tn :tabn<cr>
 map <Leader>tf :tabr<cr>
 map <Leader>tl :tabl<cr>
 
-colorscheme molokai
+colorscheme dracula
 set nowrap
 set ruler
 set cursorline
@@ -161,7 +166,7 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 " Limit popup menu height
 set pumheight=20
-set completeopt=longest,menuone,preview
+set completeopt=longest,menuone
 
 "set spell
 set spelllang=pl
@@ -233,3 +238,18 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['standard']
 
+let g:tern_request_timeout = 1
+
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
+
+nnoremap K :TernDoc<CR>
+
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+let g:neomake_javascript_enabled_makers = ['eslint']
+autocmd! BufWritePost * Neomake
+
+set termguicolors
+
+let g:javascript_plugin_jsdoc = 1
