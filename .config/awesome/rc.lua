@@ -192,7 +192,7 @@ for s = 1, screen.count() do
     mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
 
     -- Create the wibox
-    mywibox[s] = awful.wibox({ position = "top", screen = s })
+    mywibox[s] = awful.wibox({ position = "bottom", screen = s })
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
@@ -263,7 +263,7 @@ globalkeys = awful.util.table.join(
     -- Standard program
     --awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit),
+    --awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
