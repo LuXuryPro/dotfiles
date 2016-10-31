@@ -122,6 +122,8 @@ memwidget = wibox.widget.textbox()
 vicious.register(memwidget, vicious.widgets.mem, " Memory: $1%", 600)
 cpuwidget = wibox.widget.textbox()
 vicious.register(cpuwidget, vicious.widgets.cpu, "CPU: $1%")
+fswidget = wibox.widget.textbox()
+vicious.register(fswidget, vicious.widgets.fs, "/ ${/ avail_gb} GB /home ${/home avail_gb} GB ", 600)
 
 
 -- Create a wibox for each screen and add it
@@ -204,6 +206,7 @@ for s = 1, screen.count() do
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
 --    right_layout:add(mytextclock)
+    right_layout:add(fswidget)
     right_layout:add(cpuwidget)
     right_layout:add(memwidget)
     right_layout:add(battwidget)
