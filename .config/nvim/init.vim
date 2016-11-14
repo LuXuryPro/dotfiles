@@ -55,6 +55,10 @@ Plug 'https://github.com/neovimhaskell/haskell-vim'
 Plug 'morhetz/gruvbox'
 Plug 'jnurmine/Zenburn'
 Plug 'dracula/vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'drinksober/nvim-yapf-formater'
+Plug 'Shougo/vimproc.vim'
+Plug 'eagletmt/ghcmod-vim'
 call plug#end()
 
 set nocompatible

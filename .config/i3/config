@@ -158,4 +158,8 @@ bar {
 
 bindsym $mod+x move workspace to output right
 
+new_window pixel 1
+
 assign [class="chromium"] 1
+
+

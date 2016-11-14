@@ -10,10 +10,10 @@ xrdb -load ~/.Xresources
 #/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 #sxhkd &
 #exec bspwm
-exec awesome
+#exec awesome
 #exec frankenwm2bar.sh
 #exec spectrwm
-#exec i3
+exec i3
 
 #exec ~/.cabal/bin/xmonad
 
