@@ -8,4 +8,4 @@ if [[ -d $TEXLIVEDIR ]] ; then
     PATH=$PATH:$TEXLIVEDIR
 fi
 #run xorg
-#startx
+startx

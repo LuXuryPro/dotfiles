@@ -1,67 +1,71 @@
 scriptencoding utf-8
 call plug#begin('~/.config/nvim/plugged')
-Plug 'Shougo/unite.vim'
-Plug 'jreybert/vimagit'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'majutsushi/tagbar'
-Plug 'airblade/vim-gitgutter'
+Plug 'https://github.com/fatih/vim-go'
+"Plug 'Shougo/unite.vim'
+"Plug 'Shougo/denite.nvim'
+"Plug 'jreybert/vimagit'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'majutsushi/tagbar'
+"Plug 'airblade/vim-gitgutter'
 "Plug 'suan/vim-instant-markdown'
 "Plug '~/src/deoplete-rtags'
-Plug 'zchee/deoplete-jedi'
+"Plug 'zchee/deoplete-jedi'
 "Plug 'zchee/deoplete-clang'
 "Plug 'pignacio/vim-yapf-format'
-Plug 'tfnico/vim-gradle'
-Plug 'fisadev/vim-ctrlp-cmdpalette'
-Plug 'alfredodeza/coveragepy.vim'
-Plug 'rhysd/vim-clang-format'
+"Plug 'tfnico/vim-gradle'
+"Plug 'fisadev/vim-ctrlp-cmdpalette'
+"Plug 'alfredodeza/coveragepy.vim'
+"Plug 'rhysd/vim-clang-format'
 Plug 'benekastah/neomake'
 Plug 'Shougo/deoplete.nvim'
-Plug 'artur-shaik/vim-javacomplete2'
-Plug 'https://github.com/vim-scripts/Relaxed-Green'
+"Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
+"Plug 'https://github.com/vim-scripts/Relaxed-Green'
 Plug 'https://github.com/vim-scripts/greenvision'
-Plug 'https://github.com/ratazzi/blackboard.vim'
-Plug 'heavenshell/vim-pydocstring'
-Plug 'frankier/neovim-colors-solarized-truecolor-only'
+"Plug 'https://github.com/ratazzi/blackboard.vim'
+"Plug 'heavenshell/vim-pydocstring'
+"Plug 'frankier/neovim-colors-solarized-truecolor-only'
 "Plug 'bbchung/Clamp'
-Plug 'https://github.com/mrtazz/DoxygenToolkit.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'https://github.com/tomasr/molokai'
-Plug 'https://github.com/justinmk/molokai'
+"Plug 'https://github.com/mrtazz/DoxygenToolkit.vim'
+"Plug 'vim-airline/vim-airline'
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'https://github.com/tomasr/molokai'
+"Plug 'https://github.com/justinmk/molokai'
 "Plug 'Yggdroot/indentLine'
-Plug 'https://github.com/tikhomirov/vim-glsl'
-Plug 'git://github.com/nathanaelkane/vim-indent-guides.git'
+"Plug 'https://github.com/tikhomirov/vim-glsl'
+"Plug 'git://github.com/nathanaelkane/vim-indent-guides.git'
 "Plug 'https://github.com/Shougo/neocomplete.vim'
 "Plug 'justmao945/vim-clang'
-Plug 'lyuts/vim-rtags'
+"Plug 'lyuts/vim-rtags'
 "Plug 'https://github.com/Rip-Rip/clang_complete'
-Plug 'https://github.com/ervandew/supertab'
+"Plug 'https://github.com/ervandew/supertab'
 "Plug 'https://github.com/scrooloose/syntastic'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+"Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 "Plug 'https://github.com/davidhalter/jedi-vim'
 "Plug 'klen/python-mode'
 "Plug 'https://github.com/terryma/vim-multiple-cursors'
 "Plug 'https://github.com/Valloric/YouCompleteMe'
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'tpope/vim-fugitive'
-Plug 'https://github.com/wellsjo/wellsokai.vim'
-Plug 'https://github.com/sickill/vim-monokai'
-Plug 'https://github.com/godlygeek/tabular'
-Plug 'https://github.com/eagletmt/neco-ghc'
-Plug 'pangloss/vim-javascript'
-Plug 'ternjs/tern_for_vim'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'https://github.com/neovimhaskell/haskell-vim'
-Plug 'morhetz/gruvbox'
-Plug 'jnurmine/Zenburn'
+"Plug 'tpope/vim-fugitive'
+"Plug 'https://github.com/wellsjo/wellsokai.vim'
+"Plug 'https://github.com/sickill/vim-monokai'
+"Plug 'https://github.com/godlygeek/tabular'
+"Plug 'https://github.com/eagletmt/neco-ghc'
+"Plug 'pangloss/vim-javascript'
+"Plug 'ternjs/tern_for_vim'
+"Plug 'carlitux/deoplete-ternjs'
+"Plug 'https://github.com/neovimhaskell/haskell-vim'
+"Plug 'morhetz/gruvbox'
+"Plug 'jnurmine/Zenburn'
 Plug 'dracula/vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'drinksober/nvim-yapf-formater'
-Plug 'Shougo/vimproc.vim'
-Plug 'eagletmt/ghcmod-vim'
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'Shougo/vimproc.vim'
+"Plug 'eagletmt/ghcmod-vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 call plug#end()
 
 set nocompatible
+set hid
 filetype plugin indent on
 
 set encoding=utf-8
@@ -88,7 +92,7 @@ set shiftround
 set expandtab
 set smarttab
 
-set autochdir
+"set autochdir
 
 set wildmenu
 
@@ -104,7 +108,7 @@ map <Leader>tn :tabn<cr>
 map <Leader>tf :tabr<cr>
 map <Leader>tl :tabl<cr>
 
-colorscheme dracula
+colorscheme molokai
 set nowrap
 set ruler
 set cursorline
@@ -200,8 +204,8 @@ set colorcolumn=+1
 "let &synmaxcol = &textwidth+1
 
 "nvim
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>q :CtrlPCmdPalette<cr>
 " inoremap jj <ESC>
@@ -217,7 +221,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:syntastic_java_javac_config_file_enabled = 1
 
-autocmd FileType python nnoremap <leader>y :call <SID>YapfRun()<CR>
+"autocmd FileType python nnoremap <leader>y :call <SID>YapfRun()<CR>
 
 inoremap <silent><expr> <C-Space>
             \ pumvisible() ? "\<C-n>" :
@@ -247,9 +251,9 @@ let g:tern_request_timeout = 1
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 
-nnoremap K :TernDoc<CR>
+"nnoremap K :TernDoc<CR>
 
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](venv|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd! BufWritePost * Neomake
@@ -257,3 +261,18 @@ autocmd! BufWritePost * Neomake
 set termguicolors
 
 let g:javascript_plugin_jsdoc = 1
+
+let g:python_host_skip_check = 1
+let g:python3_host_skip_check = 1
+
+nnoremap <c-p> :FZF<cr>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+set grepprg=ag\ --nogroup\ --nocolor
+tnoremap <Esc> <C-\><C-n>
+
+let g:go_auto_type_info = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1

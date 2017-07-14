@@ -7,11 +7,12 @@ bindkey -v
 
 ttyctl -f
 setopt completealiases
-setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY
 
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000
+SAVEHIST=100000
 autoload -U colors && colors
 zstyle ':completion:*' menu select
 autoload -Uz compinit && compinit
@@ -47,12 +48,11 @@ bindkey -M viins '^R' history-incremental-search-backward
 
 
 #[[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
-export GOPATH=~/go
 export PATH=$PATH:~/go/bin
 
 case $TERM in
     st*)
-        precmd () {print -Pn "\e]0;%n@%m: %~\a"}
+        preexec () {print -Pn "\e]0;%n@%m: %~ $3\a"}
 esac
 eval $(dircolors ~/.dircolors)
 
@@ -62,3 +62,5 @@ alias :e="nvim"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /etc/profile.d/vte.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

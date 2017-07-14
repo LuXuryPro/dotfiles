@@ -161,5 +161,10 @@ bindsym $mod+x move workspace to output right
 new_window pixel 1
 
 assign [class="chromium"] 1
+assign [class="Steam"] 2
+assign [class="Steam"] 2
+assign [class=".*jetbrains.*"] 3
+assign [class="Thunderbird"] 9
 
 
+for_window [class=".*jetbrains.*"] move to workspace 3
