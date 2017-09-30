@@ -17,10 +17,12 @@ Plug 'https://github.com/fatih/vim-go'
 "Plug 'alfredodeza/coveragepy.vim'
 "Plug 'rhysd/vim-clang-format'
 Plug 'benekastah/neomake'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 "Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
 "Plug 'https://github.com/vim-scripts/Relaxed-Green'
-Plug 'https://github.com/vim-scripts/greenvision'
+"Plug 'https://github.com/vim-scripts/greenvision'
 "Plug 'https://github.com/ratazzi/blackboard.vim'
 "Plug 'heavenshell/vim-pydocstring'
 "Plug 'frankier/neovim-colors-solarized-truecolor-only'
@@ -56,7 +58,7 @@ Plug 'https://github.com/tomasr/molokai'
 "Plug 'https://github.com/neovimhaskell/haskell-vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'jnurmine/Zenburn'
-Plug 'dracula/vim'
+"Plug 'dracula/vim'
 "Plug 'kchmck/vim-coffee-script'
 "Plug 'Shougo/vimproc.vim'
 "Plug 'eagletmt/ghcmod-vim'
@@ -276,3 +278,9 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
+let g:go_fmt_command = "goimports"
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+

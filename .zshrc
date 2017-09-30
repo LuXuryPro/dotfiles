@@ -64,3 +64,5 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /etc/profile.d/vte.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export QT_QPA_PLATFORMTHEME="qt5ct"
