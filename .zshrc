@@ -66,3 +66,6 @@ source /etc/profile.d/vte.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+export GOPATH=~/go
+command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
