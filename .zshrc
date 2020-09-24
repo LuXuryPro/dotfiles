@@ -1,5 +1,5 @@
-export GIT_PROMPT_EXECUTABLE="haskell"
-source ~/src/zsh-git-prompt/zshrc.sh
+#export GIT_PROMPT_EXECUTABLE="haskell"
+#source ~/src/zsh-git-prompt/zshrc.sh
 export KEYTIMEOUT=1
 export EDITOR=nvim
 export PAGER=less
@@ -24,7 +24,7 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd 'v' edit-command-line
 
-PROMPT='%{$fg[yellow]%}[%{$reset_color%}%{$fg[blue]%}%D{%a %d-%m-%Y}%{$reset_color%} %{$fg[red]%}%D{%H:%M:%S}%{$reset_color%}%{$fg[yellow]%}]%{$reset_color%} %{$fg[yellow]%}[%{$reset_color%}%{$fg[green]%}%n@%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}%{$fg[yellow]%}]%{$reset_color%} $(git_super_status)'$'\n''%# '
+PROMPT="%{$fg[yellow]%}[%{$reset_color%}%{$fg[blue]%}%D{%a %d-%m-%Y}%{$reset_color%} %{$fg[red]%}%D{%H:%M:%S}%{$reset_color%}%{$fg[yellow]%}]%{$reset_color%} %{$fg[yellow]%}[%{$reset_color%}%{$fg[green]%}%n@%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}%{$fg[yellow]%}]%{$reset_color%}"$'\n'"%# "
 RPROMPT=""
 source ~/.aliases
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -60,7 +60,8 @@ alias vi="nvim"
 alias vim="nvim"
 alias :e="nvim"
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 source /etc/profile.d/vte.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -68,4 +69,7 @@ source /etc/profile.d/vte.sh
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 export GOPATH=~/go
-command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
+#command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
